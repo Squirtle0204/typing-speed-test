@@ -1,0 +1,115 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4ff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInBody 1.2s ease-in-out forwards;
+}
+
+/* Container Card */
+.container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 550px;
+  animation: popIn 1s ease-out forwards;
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+/* Title */
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Quote */
+#quote {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+  font-style: italic;
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.4);
+}
+
+/* Results Section */
+#results {
+  font-size: 17px;
+  color: #444;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+#results span {
+  font-weight: bold;
+  color: #6c63ff;
+}
+
+/* Button */
+button#restart {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button#restart:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInBody {
+  0% {
+    opacity: 0;
+    background-color: #e0eaff;
+  }
+  100% {
+    opacity: 1;
+    background-color: #f0f4ff;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
